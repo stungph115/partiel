@@ -17,6 +17,7 @@ const SearchBar = ({ getWeather }) => {
             getWeather(currentWeatherResponse.data, forecastResponse.data);
             setCity('');
         } catch (error) {
+            getWeather(null, null)
             console.error('Error fetching weather data:', error);
         }
     };
